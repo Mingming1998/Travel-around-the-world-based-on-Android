@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tour.example.tour">
+
+    <!-- 关于百度地图和鹰眼轨迹的 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <!--  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- cam -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 百度语音 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!--  -->
+    <!--  -->
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_white_min2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="41ibzxISiuunU192UluxgYGBLrB2Ishe" />
+
+        <activity android:name=".TrueActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login_activity" />
+        <activity android:name=".tour_guide_activity" />
+        <activity android:name=".main_map_and_trace_activity" />
+        <activity android:name=".personal_activity" />
+        <activity android:name=".register_activity" />
+        <activity
+            android:name=".login_luoji"
+            android:label="@string/title_activity_login_luoji" />
+        <activity android:name=".welcome_activity" />
+        <activity android:name=".getWeaActivity" />
+
+        <!-- 百度地图 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!--  -->
+        <!-- 添加鹰眼轨迹功能 -->
+        <service
+            android:name="com.baidu.trace.LBSTraceService"
+            android:enabled="true"
+            android:process=":remote" />
+        <!--  -->
+        <activity
+            android:name=".personal"
+            android:label="@string/title_activity_person1"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".TextAndPerson"
+            android:label="@string/title_activity_text_and_person"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".Main22Activity"
+            android:label="@string/title_activity_main22"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".Wea"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Main2256Activity"
+            android:label="@string/title_activity_main2256"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".share" />
+        <activity android:name=".shareActivity" />
+        <activity
+            android:name=".Main22Activity123"
+            android:label="@string/title_activity_main22123"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Around" />
+        <activity android:name=".Other" />
+        <activity android:name=".EditTask" />
+        <activity android:name=".rezhuce" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".getLocationActivity" />
+        <activity android:name=".getWeaActivity" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".CamActivity" />
+        <activity android:name=".MiniWeaActivity" />
+        <activity android:name=".TextActivity" />
+        <activity android:name=".SpotActivity" />
+        <activity android:name=".WebTourActivity" />
+        <activity android:name=".DouxingActivity" />
+        <activity android:name=".SpotsActivity" />
+        <activity android:name=".WelcomeGuideActivity" />
+        <activity android:name=".bbsActivity" />
+        <activity android:name=".cloudActivity" />
+        <activity android:name=".WebcloudActivity" />
+        <activity android:name=".bbsSubmitActivity" />
+        <activity android:name=".PoiSearchActivity" />
+        <activity android:name=".RefreshActivity" />
+        <activity android:name=".StrActivity" />
+        <activity android:name=".TwoSpotActivity" />
+        <activity android:name=".RobotActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity
+            android:name=".bbsplusActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".findpwdActivity" />
+    </application>
+
+</manifest>
